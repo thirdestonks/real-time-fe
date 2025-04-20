@@ -1,8 +1,10 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Real-Time Chat Frontend
 
-## Getting Started
+This is the frontend for a real-time messaging application, built with **Next.js**. It communicates with the backend to handle WebSocket-based messaging and user management.
 
-First, run the development server:
+## 🚀 Getting Started
+
+To get started with the development server, run:
 
 ```bash
 npm run dev
