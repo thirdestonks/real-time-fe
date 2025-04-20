@@ -2,6 +2,21 @@
 
 This is the frontend for a real-time messaging application, built with **Next.js**. It communicates with the backend to handle WebSocket-based messaging and user management.
 
+## ⚙️ Features
+
+- Modular architecture using **Next.js**
+- WebSocket-based messaging with **Pusher**
+- User-friendly interface for real-time chat
+- Fully responsive design with **Tailwind CSS**
+- Easy to integrate with any backend (e.g., NestJS, Express)
+
+## 🛠️ Upcoming Features
+
+- User authentication (JWT-based)
+- Support for chat rooms and direct messaging
+- Improved UI/UX with advanced chat features
+- Enhanced real-time message handling with Pusher
+
 ## 🚀 Getting Started
 
 To get started with the development server, run:
