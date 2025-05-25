@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react';
 import Pusher from 'pusher-js';
 import Sidebar from './Sidebar';
 
-export default function Home() {
+export default function ChatRoom() {
     const [username, setUsername] = useState('');
     const [inputName, setInputName] = useState('');
     const [messages, setMessages] = useState<{ username: string; message: string }[]>([]);
@@ -38,8 +38,6 @@ export default function Home() {
         // in case the data is needed
         setInputMessage('');
     };
-
-
       useEffect(() => {
         Pusher.logToConsole = true;
 
@@ -60,7 +58,6 @@ export default function Home() {
           channel.unsubscribe();
         };
       }, []);
-
 
     return (
         <div className="tw:min-h-screen tw:flex">
