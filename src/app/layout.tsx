@@ -29,13 +29,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased tw:flex tw:flex-col tw:min-h-screen tw:bg-gray-50`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased h-full flex flex-col min-h-screen bg-gray-50`}
       >
         <Navbar />
         <main className="">
           {children}
         </main>
-        <Footer />
+        {/* <Footer />  remove comment if needed*/}
       </body>
     </html>
   );

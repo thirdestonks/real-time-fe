@@ -60,39 +60,39 @@ export default function ChatRoom() {
       }, []);
 
     return (
-        <div className="tw:min-h-screen tw:flex">
+        <div className="min-h-screen flex">
             <Sidebar />
 
-            <div className="tw:flex-1 tw:bg-gray-400 tw:flex tw:items-center tw:justify-center">
+            <div className="flex-1 bg-gray-600 flex items-center justify-center">
                 {!username ? (
-                    <form onSubmit={handleUsernameSubmit} className="tw:bg-white tw:p-6 tw:rounded tw:shadow-md tw:w-full tw:max-w-sm">
-                        <h2 className="tw:text-xl tw:text-gray-500 tw:font-semibold tw:mb-4">Enter your name</h2>
+                    <form onSubmit={handleUsernameSubmit} className="bg-white p-6 rounded shadow-md w-full max-w-sm">
+                        <h2 className="text-xl text-gray-500 font-semibold mb-4">Enter your name</h2>
                         <input
                             type="text"
                             value={inputName}
                             onChange={(e) => setInputName(e.target.value)}
                             placeholder="Your name..."
-                            className="tw:w-full tw:border tw:text-gray-800 tw:placeholder-gray-500 tw:bg-white tw:rounded tw:px-3 tw:py-2 tw:mb-4"
+                            className="w-full border text-gray-800 placeholder-gray-500 bg-white rounded px-3 py-2 mb-4"
                         />
                         <button
                             type="submit"
-                            className="tw:w-full tw:bg-blue-600 tw:text-white tw:rounded tw:py-2 tw:font-medium hover:tw:bg-blue-700"
+                            className="w-full bg-blue-600 text-white rounded py-2 font-medium hover:bg-blue-700"
                         >
                             Join Chat
                         </button>
                     </form>
                 ) : (
-                    <div className="tw:bg-white tw:shadow-lg tw:rounded-lg tw:w-full tw:max-w-md tw:p-4">
-                        <h1 className="tw:text-2xl tw:text-gray-500 tw:font-bold tw:mb-4">Welcome, {username}!</h1>
-                        <div className="tw:h-64 tw:overflow-y-auto tw:mb-4 tw:border tw:rounded tw:p-2">
+                    <div className="bg-white shadow-lg rounded-lg w-full max-w-md p-4">
+                        <h1 className="text-2xl text-gray-500 font-bold mb-4">Welcome, {username}!</h1>
+                        <div className="h-64 overflow-y-auto mb-4 border rounded p-2">
                             {messages.length === 0 ? (
-                                <p className="tw:text-sm tw:text-gray-600">No messages yet.</p>
+                                <p className="text-sm text-gray-600">No messages yet.</p>
                             ) : (
-                                <ul className="tw:space-y-2">
+                                <ul className="space-y-2">
                             {messages.map((msg, index) => (
                                 <li key={index}>
-                                <p className="tw:text-xs tw:text-gray-500 tw:mb-1">{msg.username}</p>
-                                <div className="tw:bg-blue-100 tw:text-gray-800 tw:rounded tw:px-3 tw:py-2 tw:text-sm">
+                                <p className="text-xs text-gray-500 mb-1">{msg.username}</p>
+                                <div className="bg-blue-100 text-gray-800 rounded px-3 py-2 text-sm">
                                     {msg.message}
                                 </div>
                                 </li>
@@ -101,17 +101,17 @@ export default function ChatRoom() {
                             )}
 
                         </div>
-                        <form onSubmit={handleSendMessage} className="tw:flex tw:gap-2">
+                        <form onSubmit={handleSendMessage} className="flex gap-2">
                             <input
                                 type="text"
                                 placeholder="Enter message..."
                                 value={inputMessage}
                                 onChange={(e) => setInputMessage(e.target.value)}
-                                className="tw:flex-1 tw:border tw:text-gray-800 tw:placeholder-gray-500 tw:rounded tw:px-3 tw:py-2 tw:text-sm"
+                                className="flex-1 border text-gray-800 placeholder-gray-500 rounded px-3 py-2 text-sm"
                             />
                             <button
                                 type="submit"
-                                className="tw:bg-blue-600 tw:text-white tw:rounded tw:px-4 tw:py-2 tw:text-sm tw:hover:tw:bg-blue-700"
+                                className="bg-blue-600 text-white rounded px-4 py-2 text-sm hover:bg-blue-700"
                             >
                                 Send
                             </button>

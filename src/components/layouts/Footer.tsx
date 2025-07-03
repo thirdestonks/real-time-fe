@@ -2,7 +2,7 @@
 
 export default function Footer() {
   return (
-    <footer className="tw:bg-gray-800 tw:text-gray-400 tw:text-sm tw:py-4 tw:text-center tw:w-full">
+    <footer className="bg-gray-800 text-gray-400 text-sm py-4 text-center w-full">
       © {new Date().getFullYear()} RealTime Chat. Built with 💜 by Your Team.
     </footer>
   );
